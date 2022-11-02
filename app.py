@@ -9,6 +9,7 @@ Created on Wed Nov  2 00:09:47 2022
 import streamlit as st
 import numpy as np 
 import time
+from sentence_transformers import SentenceTransformer, util
 
 # adding title
 st.title('semantic analysis')
@@ -26,7 +27,7 @@ sentence_1 = st.text_input(label = 'enter the 1st sentence ', label_visibility="
 sentence_2 = st.text_input(label = 'enter the 2nd sentence ', label_visibility="visible")
 
 
-from sentence_transformers import SentenceTransformer, util
+
 
 model = SentenceTransformer('stsb-roberta-large')
 
